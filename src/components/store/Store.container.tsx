@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import Modal from "../modal";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -34,28 +35,42 @@ const StoreImage = styled.img`
 
 export default function StoreContainer() {
   const [data, setData] = useState<any>([]);
+  const [isOpen, setIsOpen] = useState(false);
+  const [tabIndex, setTabIndex] = useState(0);
+
   const getAPI = async () => {
     const response = await axios.get("http://localhost:9000/stores");
     setData(response.data);
-    console.log(response);
   };
-
-  console.log("data", data);
 
   useEffect(() => {
     getAPI();
   }, []);
+
+  const onClickImage = (event: any) => {
+    setIsOpen((prev) => !prev);
+    setTabIndex(event.target.tabIndex);
+  };
 
   return (
     <Wrapper>
       <StoreWrapper>
         <Title>EAT</Title>
 
-        {data.map((el: any) => (
+        {data.map((el: any, index: number) => (
           <div key={el.id}>
-            <StoreImage src={el.image} />
+            <StoreImage
+              src={el.thumb}
+              onClick={onClickImage}
+              id={el.id}
+              tabIndex={index}
+            />
           </div>
         ))}
+
+        {isOpen && (
+          <Modal setIsOpen={setIsOpen} tabIndex={tabIndex} data={data} />
+        )}
       </StoreWrapper>
     </Wrapper>
   );
