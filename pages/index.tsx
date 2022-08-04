@@ -1,7 +1,8 @@
 import AboutPage from "./about/index";
+import StorePage from "./store";
 
 const MainPage = () => {
-  return <AboutPage />;
+  return <StorePage />;
 };
 
 export default MainPage;
