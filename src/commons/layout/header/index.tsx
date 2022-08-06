@@ -62,6 +62,7 @@ export default function Header() {
           href="https://www.kolonmall.com/COMMONGROUND"
           target="_blank"
           rel="noreferrer"
+          style={{ color: "#394593" }}
         >
           ONLINE SHOP
         </a>
