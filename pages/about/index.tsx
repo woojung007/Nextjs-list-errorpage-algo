@@ -1,9 +1,4 @@
-const AboutPage = () => {
-  return (
-    <>
-      <div>about page</div>
-    </>
-  );
-};
-
-export default AboutPage;
+import AboutContainer from "../../src/components/about/index";
+export default function AboutPage() {
+  return <AboutContainer />;
+}

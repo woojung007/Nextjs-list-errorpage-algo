@@ -7,27 +7,6 @@ export const Wrapper = styled.div`
   align-items: center;
   padding-top: 120px;
 `;
-export const TopWrapper = styled.div`
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  padding: 0 30px;
-`;
-
-export const H1Title = styled.h1`
-  color: #394593;
-  padding-bottom: 20px;
-`;
-
-export const UnderLineWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-`;
-export const UnderLine = styled.div`
-  width: 49%;
-  height: 10px;
-  background-color: #394593;
-`;
 
 export const H1 = styled.h1`
   width: 100%;

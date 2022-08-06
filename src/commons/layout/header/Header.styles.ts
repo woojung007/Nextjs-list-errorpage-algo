@@ -9,6 +9,7 @@ export const Wrapper = styled.header`
   position: fixed;
   background-color: #fff;
   padding: 0 30px;
+  z-index: 100;
 `;
 
 export const LanguageWrapper = styled.div`
