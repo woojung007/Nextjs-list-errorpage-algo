@@ -14,10 +14,13 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 220px 30px 30px 30px;
+
   background-color: #fff;
+  color: #000;
 `;
 
-export const TopWrapper = styled.div`
+const TopWrapper = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -26,18 +29,18 @@ export const TopWrapper = styled.div`
   top: 120px;
 `;
 
-export const H1Title = styled.h1`
+const H1Title = styled.h1`
   color: #394593;
   padding-bottom: 20px;
 `;
 
-export const UnderLineWrapper = styled.div`
+const UnderLineWrapper = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-export const UnderLine = styled.div`
+const UnderLine = styled.div`
   width: 49%;
-  height: 10px;
+  height: 6px;
   background-color: #394593;
 `;
 
@@ -49,14 +52,16 @@ export default function Layout(props: ILayoutProps) {
   return (
     <Wrapper>
       <Header />
-      <TopWrapper>
-        <H1Title>STORE</H1Title>
-        <UnderLineWrapper>
-          <UnderLine></UnderLine>
-          <UnderLine></UnderLine>
-        </UnderLineWrapper>
-      </TopWrapper>
-      <Body>{props.children}</Body>
+      <Body>
+        <TopWrapper>
+          <H1Title>STORE</H1Title>
+          <UnderLineWrapper>
+            <UnderLine></UnderLine>
+            <UnderLine></UnderLine>
+          </UnderLineWrapper>
+        </TopWrapper>
+        {props.children}
+      </Body>
       <Footer />
     </Wrapper>
   );
