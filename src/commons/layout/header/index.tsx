@@ -16,6 +16,7 @@ const LanguageWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 14px;
+  background-color: #fff;
 `;
 
 const Language = styled.div`
@@ -29,6 +30,7 @@ const MenuDiv = styled.div`
   display: flex;
   justify-content: space-evenly;
   text-align: center;
+  color: #000;
 `;
 
 const Menu = styled.div`
