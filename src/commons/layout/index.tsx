@@ -1,7 +1,8 @@
 import Header from "./header/Header.container";
 import Footer from "./footer/index";
 import styled from "@emotion/styled";
-import { ReactNode } from "react";
+import { ReactNode, useContext } from "react";
+import { HeaderContext } from "../store/headerContext";
 
 const Wrapper = styled.div`
   display: flex;
@@ -49,12 +50,13 @@ interface ILayoutProps {
 }
 
 export default function Layout(props: ILayoutProps) {
+  const { clicked } = useContext(HeaderContext);
   return (
     <Wrapper>
       <Header />
       <Body>
         <TopWrapper>
-          <H1Title>STORE</H1Title>
+          <H1Title>{clicked === "about" ? "ABOUT" : "STORE"}</H1Title>
           <UnderLineWrapper>
             <UnderLine></UnderLine>
             <UnderLine></UnderLine>
