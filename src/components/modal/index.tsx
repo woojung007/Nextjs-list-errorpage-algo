@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import { useRouter } from "next/router";
 
 const Wrapper = styled.div`
   width: 80vw;
@@ -47,14 +48,18 @@ const StoreURL = styled.div`
 `;
 
 export default function Modal(props: any) {
+  const router = useRouter();
+
   const onClickCloseBtn = () => {
     props.setIsOpen(false);
   };
 
-  const onClickURL = (data: any) => {
-    console.log("click aaa");
-    console.log(window.location);
-    console.log(data);
+  const onClickURL = (event: any) => {
+    console.log(event.target.href);
+
+    if (event.target.href === undefined) {
+      router.push("/error");
+    }
   };
 
   return (
@@ -71,11 +76,11 @@ export default function Modal(props: any) {
             <a
               target="_blank"
               href={props.data?.[props.tabIndex]?.url}
-              rel="noreferrer"
+              rel="noopener noreferrer"
               onClick={onClickURL}
             >
               {props.data?.[props.tabIndex]?.url}
-              홈페이지 바로가기
+              <p>홈페이지 바로가기</p>
             </a>
           </StoreURL>
         )}
