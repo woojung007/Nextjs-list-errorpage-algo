@@ -20,7 +20,7 @@ export const ImageWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 100px 0 100px 30px;
+  padding: 100px 0 0 30px;
 `;
 
 export const StoreImage = styled.img`

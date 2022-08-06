@@ -14,7 +14,7 @@ const Body = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 220px 30px 30px 30px;
+  padding: 220px 30px 100px 30px;
 
   background-color: #fff;
   color: #000;
