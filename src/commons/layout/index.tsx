@@ -1,4 +1,4 @@
-import Header from "./header/index";
+import Header from "./header/Header.container";
 import Footer from "./footer/index";
 import styled from "@emotion/styled";
 import { ReactNode } from "react";
