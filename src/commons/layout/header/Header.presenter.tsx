@@ -4,7 +4,6 @@ import * as S from "./Header.styles";
 interface IPropsHeaderPresenter {
   moveToAbout: () => void;
   moveToStore: () => void;
-  clicked: string;
 }
 
 export default function HeaderPresenter(props: IPropsHeaderPresenter) {

@@ -13,6 +13,14 @@ interface IPropsStorePresenter {
 export default function StorePresenter(props: IPropsStorePresenter) {
   return (
     <S.Wrapper>
+      <S.TopWrapper>
+        <S.H1Title>STORE</S.H1Title>
+        <S.UnderLineWrapper>
+          <S.UnderLine></S.UnderLine>
+          <S.UnderLine></S.UnderLine>
+        </S.UnderLineWrapper>
+      </S.TopWrapper>
+
       <S.H1>STORE</S.H1>
 
       <S.ImageWrapper>
