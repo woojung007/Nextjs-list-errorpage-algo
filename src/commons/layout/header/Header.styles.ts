@@ -13,15 +13,59 @@ export const Wrapper = styled.header`
 `;
 
 export const LanguageWrapper = styled.div`
-  width: 17%;
+  width: 16%;
   display: flex;
   justify-content: space-between;
   font-size: 14px;
-  background-color: #fff;
+  position: relative;
+`;
+
+export const DefaultOption = styled.option`
+  color: #111;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  padding-left: 10px;
+  z-index: 300;
 `;
 
 export const Language = styled.div`
-  width: 100px;
+  width: 90px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+
+  padding: 30px 0 0 10px;
+
+  position: absolute;
+  top: -15px;
+  margin-right: 30px;
+
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  color: #111;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+`;
+
+export const Option = styled.a`
+  color: #999;
+  font-weight: 400;
+  font-size: 12px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  :hover {
+    color: #000;
+    font-weight: 400;
+  }
 `;
 
 export const MenuDiv = styled.div`
@@ -35,6 +79,8 @@ export const MenuDiv = styled.div`
 `;
 
 export const Menu = styled.div`
+  font-size: 19px;
+  letter-spacing: 0.03rem;
   cursor: pointer;
   :hover {
     color: #394593;
