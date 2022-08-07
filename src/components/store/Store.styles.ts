@@ -8,19 +8,20 @@ export const Wrapper = styled.div`
 `;
 
 export const H1 = styled.h1`
-  width: 100%;
+  width: 1180px;
   font-weight: 700;
   font-size: 30px;
   text-align: left;
-  padding-bottom: 20px;
+  padding-top: 100px;
 `;
 
 export const ImageWrapper = styled.section`
   width: 1180px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  padding: 100px 0 0 30px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 30px 0 0 30px;
+  vertical-align: baseline;
 `;
 
 export const StoreImage = styled.img`

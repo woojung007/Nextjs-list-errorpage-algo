@@ -67,7 +67,8 @@ export default function AboutContainer() {
             <br /> ✓ STORE 리스트는 정사각형 이미지 그리드로 표현 (REST API
             사용)
             <Add>
-              - <Span>flex-wrap: wrap</Span>을 사용하여 이미지 그리드를
+              - <Span>display: grid</Span>와<Span>grid-template-rows</Span>,
+              <Span>grid-template-columns</Span>를 사용하여 이미지 그리드를
               구현하였습니다.
             </Add>
             <p>

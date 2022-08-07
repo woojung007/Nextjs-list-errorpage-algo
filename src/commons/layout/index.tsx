@@ -64,9 +64,6 @@ export default function Layout(props: ILayoutProps) {
         {!isHiddenTitle && (
           <TopWrapper>
             <H1Title>
-              {/* {location.href.includes("about") && "ABOUT"}
-              {location.href.includes("store") && "STORE"} */}
-
               {clicked === "about" && "ABOUT"}
               {clicked === "store" && "STORE"}
             </H1Title>

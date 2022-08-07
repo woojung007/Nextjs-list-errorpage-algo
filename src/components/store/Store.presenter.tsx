@@ -13,9 +13,9 @@ interface IPropsStorePresenter {
 export default function StorePresenter(props: IPropsStorePresenter) {
   return (
     <S.Wrapper>
-      <S.ImageWrapper>
-        <S.H1>STORE</S.H1>
+      <S.H1>STORE</S.H1>
 
+      <S.ImageWrapper>
         {props.data.map((el: any, index: number) => (
           <div key={el.id}>
             <S.StoreImage
