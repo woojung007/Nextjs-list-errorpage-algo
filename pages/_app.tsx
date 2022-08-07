@@ -17,7 +17,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   axios.get(router.asPath).catch((error: AxiosError) => {
     if (error.response?.status === 404) {
-      router.push("/error");
+      // router.push("/error");
+      location.replace("/error");
     }
   });
 
