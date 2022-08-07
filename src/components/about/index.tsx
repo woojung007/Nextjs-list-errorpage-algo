@@ -70,6 +70,8 @@ export default function AboutContainer() {
               - <Span>display: grid</Span>와<Span>grid-template-rows</Span>,
               <Span>grid-template-columns</Span>를 사용하여 이미지 그리드를
               구현하였습니다.
+              <br /> - <Span>@media query</Span>를 이용하여 반응형 그리드를
+              구현하였습니다.
             </Add>
             <p>
               ✓ 하나의 아이템을 선택하면 팝업을 띄우고 맛집 이름과 사진, 설명,

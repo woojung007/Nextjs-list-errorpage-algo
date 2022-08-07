@@ -15,7 +15,7 @@ export const H1 = styled.h1`
   text-align: left;
   padding-top: 100px;
 
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) and (max-width: 1400px) {
     width: 90vw;
   }
 
@@ -32,22 +32,22 @@ export const ImageWrapper = styled.section`
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   justify-content: space-between;
 
-  @media (min-width: 992px) and (max-width: 1400px) {
-    width: 70vw;
-    grid-template-columns: 1fr 1fr 1fr;
+  @media (min-width: 768px) and (max-width: 1400px) {
+    width: 90vw;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 540px) and (max-width: 767px) {
     width: 90vw;
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  @media (max-width: 767px) {
+  @media (min-width: 281px) and (max-width: 539px) {
     width: 90vw;
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 380px) {
+  @media (max-width: 280px) {
     width: 90vw;
     grid-template-columns: 1fr;
   }
@@ -57,22 +57,22 @@ export const StoreImage = styled.img`
   width: 190px;
   height: 190px;
   border-radius: 8px;
-  margin: 0 20px 20px 0;
+  margin: 0 15px 15px 0;
 
   cursor: pointer;
 
-  @media (min-width: 992px) and (max-width: 1400px) {
-    width: 250px;
-    height: 250px;
+  @media (min-width: 768px) and (max-width: 1400px) {
+    width: 220px;
+    height: 220px;
   }
 
-  @media (min-width: 768px) and (max-width: 991px) {
-    width: 250px;
-    height: 250px;
+  @media (min-width: 281px) and (max-width: 767px) {
+    width: 160px;
+    height: 160px;
   }
 
-  @media (max-width: 767px) {
-    width: 280px;
-    height: 280px;
+  @media (max-width: 280px) {
+    width: 250px;
+    height: 250px;
   }
 `;
