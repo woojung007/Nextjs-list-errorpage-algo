@@ -3,6 +3,7 @@ import Footer from "./footer/index";
 import styled from "@emotion/styled";
 import { ReactNode, useContext } from "react";
 import { HeaderContext } from "../store/headerContext";
+import { useRouter } from "next/router";
 
 const Wrapper = styled.div`
   display: flex;
@@ -49,19 +50,27 @@ interface ILayoutProps {
   children: ReactNode;
 }
 
+const HIDDEN_TITLE = ["/error"];
+
 export default function Layout(props: ILayoutProps) {
   const { clicked } = useContext(HeaderContext);
+  const router = useRouter();
+
+  let isHiddenTitle = HIDDEN_TITLE.includes(router.asPath);
+
   return (
     <Wrapper>
       <Header />
       <Body>
-        <TopWrapper>
-          <H1Title>{clicked === "about" ? "ABOUT" : "STORE"}</H1Title>
-          <UnderLineWrapper>
-            <UnderLine></UnderLine>
-            <UnderLine></UnderLine>
-          </UnderLineWrapper>
-        </TopWrapper>
+        {!isHiddenTitle && (
+          <TopWrapper>
+            <H1Title>{clicked === "about" ? "ABOUT" : "STORE"}</H1Title>
+            <UnderLineWrapper>
+              <UnderLine></UnderLine>
+              <UnderLine></UnderLine>
+            </UnderLineWrapper>
+          </TopWrapper>
+        )}
         {props.children}
       </Body>
       <Footer />
