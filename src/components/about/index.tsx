@@ -94,8 +94,11 @@ export default function AboutContainer() {
               페이지로 이동하도록 하였습니다.
               <br /> - _app.tsx에서 <Span>axios</Span>와{" "}
               <Span>router.asPath </Span> 그리고
-              <Span>location.replace( )</Span>를 사용하여 HTTP 상태코드가
-              404번일 때 에러 페이지로 가도록 설정해주었습니다.
+              <Span>location.replace( )</Span>를 사용하여{" "}
+              <b style={{ backgroundColor: "lightyellow" }}>
+                HTTP 상태코드가 404번일 때
+              </b>{" "}
+              에러 페이지로 가도록 설정해주었습니다.
               <br /> -{" "}
               <b style={{ backgroundColor: "lightyellow" }}>시도했던 방법</b> :
               router.push를 이용하니{" "}
