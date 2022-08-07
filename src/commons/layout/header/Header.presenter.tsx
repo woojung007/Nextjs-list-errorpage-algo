@@ -1,3 +1,4 @@
+import Link from "next/link";
 import * as S from "./Header.styles";
 
 interface IPropsHeaderPresenter {
@@ -18,14 +19,11 @@ export default function HeaderPresenter(props: IPropsHeaderPresenter) {
             <option>JAPANESE</option>
           </select>
         </S.Language>
-        <a
-          href="https://www.kolonmall.com/COMMONGROUND"
-          target="_blank"
-          rel="noreferrer"
-          style={{ color: "#394593" }}
-        >
-          ONLINE SHOP
-        </a>
+        <Link href="https://www.kolonmall.com/COMMONGROUND">
+          <a target="_blank" rel="noreferrer" style={{ color: "#394593" }}>
+            ONLINE SHOP
+          </a>
+        </Link>
       </S.LanguageWrapper>
       <S.MenuDiv>
         <S.Menu onClick={props.moveToAbout}>ABOUT</S.Menu>

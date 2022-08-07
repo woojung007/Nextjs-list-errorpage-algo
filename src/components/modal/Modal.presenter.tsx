@@ -1,14 +1,15 @@
 import * as S from "./Modal.styles";
+import Link from "next/link";
 
 interface IPropsModalPresenter {
   data: any;
   tabIndex: number;
   onClickCloseBtn: () => void;
-  onClickURL: any;
 }
 
 export default function ModalPresenter(props: IPropsModalPresenter) {
   const des = props.data?.[props.tabIndex].description;
+  const url = props.data?.[props.tabIndex]?.url;
 
   return (
     <S.Background>
@@ -30,17 +31,11 @@ export default function ModalPresenter(props: IPropsModalPresenter) {
           </S.ContentWrapper>
           <br />
 
-          {props.data?.[props.tabIndex]?.url && (
+          {url && (
             <S.StoreURL>
               <S.GoURL>홈페이지 바로가기</S.GoURL>
-
-              <a
-                target="_blank"
-                href={props.data?.[props.tabIndex]?.url}
-                rel="noopener noreferrer"
-                onClick={props.onClickURL}
-              >
-                {props.data?.[props.tabIndex]?.url}
+              <a target="_blank" href={url} rel="noopener noreferrer">
+                {url}
               </a>
             </S.StoreURL>
           )}

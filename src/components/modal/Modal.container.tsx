@@ -1,5 +1,7 @@
 import { useRouter } from "next/router";
 import ModalPresenter from "./Modal.presenter";
+import axios, { AxiosError } from "axios";
+import { useEffect } from "react";
 
 export default function Modal(props: any) {
   const router = useRouter();
@@ -8,18 +10,9 @@ export default function Modal(props: any) {
     props.setIsOpen(false);
   };
 
-  const onClickURL = (event: any) => {
-    console.log(event.target.href);
-
-    if (event.target.href === undefined) {
-      router.push("/error");
-    }
-  };
-
   return (
     <ModalPresenter
       onClickCloseBtn={onClickCloseBtn}
-      onClickURL={onClickURL}
       data={props.data}
       tabIndex={props.tabIndex}
     />

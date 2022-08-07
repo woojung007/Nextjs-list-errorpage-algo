@@ -1,5 +1,8 @@
 import styled from "@emotion/styled";
 import Image from "next/image";
+import Link from "next/link";
+import Router from "next/router";
+import { useRouter } from "next/router";
 
 const Wrapper = styled.footer`
   width: 100vw;
@@ -65,18 +68,38 @@ const Name = styled.div`
 `;
 
 export default function Footer() {
+  const router = useRouter();
+
+  const moveToFacebook = () => {
+    router.push("https://www.facebook.com/commonground.1st");
+  };
+
+  const moveToInstagram = () => {
+    router.push("https://www.facebook.com/commonground.1st");
+  };
+
   return (
     <Wrapper>
       <TopLine></TopLine>
       <ImageWrapper>
         <Image src="/c-footer-logo.svg" alt="logo" width={150} height={50} />
         <SNSWrapper>
-          <Image src="/c-facebook.svg" alt="facebook" width={15} height={10} />
           <Image
+            onClick={moveToFacebook}
+            src="/c-facebook.svg"
+            alt="facebook"
+            width={15}
+            height={10}
+            style={{ cursor: "pointer" }}
+          />
+
+          <Image
+            onClick={moveToInstagram}
             src="/c-instagram.svg"
             alt="instagram"
             width={30}
             height={30}
+            style={{ cursor: "pointer" }}
           />
         </SNSWrapper>
       </ImageWrapper>

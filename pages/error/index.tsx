@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import styled from "@emotion/styled";
 import { useRef, useEffect } from "react";
+import TimerPage from "./timer";
 
 const Wrapper = styled.div`
   width: 100vw;
@@ -18,37 +19,36 @@ const Wrapper = styled.div`
 `;
 export default function ErrorPage() {
   const router = useRouter();
-  let countRef = useRef<any>(5);
+  // let countRef = useRef<any>(5);
 
   const moveToMainPage = () => {
     router.push("/");
   };
 
-  let interval: any;
-  function Timer() {
-    let time = 4;
-    interval = setInterval(() => {
-      if (time >= 0) {
-        countRef.current.innerText = time;
-        time -= 1;
-      } else if (time < 0) {
-        clearInterval(interval);
-        moveToMainPage();
-      }
-    }, 1000);
-  }
+  // let interval: any;
+  // const Timer = () => {
+  //   let time = 4;
+  //   interval = setInterval(() => {
+  //     if (time >= 0) {
+  //       countRef.current.innerText = time;
+  //       time -= 1;
+  //     } else if (time < 0) {
+  //       clearInterval(interval);
+  //     }
+  //   }, 1000);
+  // };
 
-  useEffect(() => {
-    Timer();
-  }, []);
+  setTimeout(moveToMainPage, 5000);
 
   return (
     <Wrapper>
       <h1 style={{ color: "#394593" }}>Error</h1>
       <div>접근할 수 없는 URL입니다.</div>
       <div>
-        <span ref={countRef}>{countRef.current}</span>초 뒤 메인페이지로
-        이동합니다!
+        {/* <span ref={countRef}>{countRef.current}</span>초 뒤 메인페이지로
+        이동합니다! */}
+        {/* <span>5</span>초 뒤 메인페이지로 이동합니다! */}
+        {<TimerPage />}
       </div>
     </Wrapper>
   );
