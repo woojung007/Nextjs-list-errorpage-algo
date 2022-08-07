@@ -31,7 +31,7 @@ export default function HeaderPresenter(props: IPropsHeaderPresenter) {
         <S.Menu onClick={props.moveToAbout}>ABOUT</S.Menu>
         <S.Menu onClick={props.moveToStore}>STORE</S.Menu>
       </S.MenuDiv>
-      <S.Logo>
+      <S.Logo onClick={props.moveToStore}>
         AWESOME <br /> FOOD STORE
       </S.Logo>
     </S.Wrapper>

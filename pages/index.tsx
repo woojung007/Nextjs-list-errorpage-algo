@@ -1,12 +1,5 @@
-import AboutPage from "./about/index";
-import StorePage from "./store";
-import { useContext } from "react";
-import { HeaderContext } from "../src/commons/store/headerContext";
+import StorePage from "./store/index";
 
-const MainPage = () => {
-  const { clicked } = useContext(HeaderContext);
-
-  return <>{clicked === "about" ? <AboutPage /> : <StorePage />}</>;
-};
-
-export default MainPage;
+export default function MainPage() {
+  return <StorePage />;
+}

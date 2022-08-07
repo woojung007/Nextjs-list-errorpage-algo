@@ -1,20 +1,20 @@
 import HeaderPresenter from "./Header.presenter";
 import { useRouter } from "next/router";
 import { useContext } from "react";
-import { HeaderContext } from "../../store/headerContext";
+import { HeaderContext } from "../../context";
 
 export default function Header() {
   const { clicked, setClicked } = useContext(HeaderContext);
   const router = useRouter();
 
   const moveToAbout = () => {
-    router.push("/about");
     setClicked("about");
+    router.push("/about");
   };
 
   const moveToStore = () => {
-    router.push("/store");
     setClicked("store");
+    router.push("/store");
   };
 
   return (
