@@ -57,8 +57,6 @@ export default function Layout(props: ILayoutProps) {
   const router = useRouter();
   const isHiddenTitle = HIDDEN_TITLE.includes(router.asPath);
 
-  // console.log("location", location);
-
   return (
     <Wrapper>
       <Header />
@@ -70,6 +68,7 @@ export default function Layout(props: ILayoutProps) {
               {location.href.includes("store") && "STORE"} */}
 
               {clicked === "about" && "ABOUT"}
+              {clicked === "store" && "STORE"}
             </H1Title>
             <UnderLineWrapper>
               <UnderLine></UnderLine>

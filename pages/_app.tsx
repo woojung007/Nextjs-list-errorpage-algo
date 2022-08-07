@@ -10,11 +10,6 @@ function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const [clicked, setClicked] = useState("store");
 
-  const value = {
-    clicked,
-    setClicked,
-  };
-
   axios.get(router.asPath).catch((error: AxiosError) => {
     if (error.response?.status === 404) {
       // router.push("/error");
@@ -23,7 +18,12 @@ function MyApp({ Component, pageProps }: AppProps) {
   });
 
   return (
-    <HeaderContext.Provider value={value}>
+    <HeaderContext.Provider
+      value={{
+        clicked,
+        setClicked,
+      }}
+    >
       <Layout>
         <Component {...pageProps} />
       </Layout>
