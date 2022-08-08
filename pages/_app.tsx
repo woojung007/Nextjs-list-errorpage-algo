@@ -7,7 +7,6 @@ import axios, { AxiosError } from "axios";
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const [clicked, setClicked] = useState("store");
 
   axios.get(router.asPath).catch((error: AxiosError) => {
     if (error.response?.status === 404) {
