@@ -11,6 +11,7 @@ Next , start the Project : <br/>
  ## 2. 사용한 기술 스택
 `Next.js`, `React`, `Typescript`, `axios`,`Emotion`
 
+<br/>
 
 ## 3. 프로젝트 소개
    
@@ -42,6 +43,6 @@ Next , start the Project : <br/>
 <br /> &nbsp;&nbsp; - `setInterval()`과 `clearInterval()`을 사용하여 5초 타이머를 만들었고 `useRef()`를 사용해서 5초가 줄어드는 것을 바로 화면에 보여주었습니다.
 <br />&nbsp;&nbsp; - `setTimeout( )`을 사용해서 5초 뒤에 메인 페이지로 이동하도록 하였습니다.
 <br /> &nbsp;&nbsp; - _app.tsx에서 `axios`와 `router.asPath`그리고 `location.replace( )`를 사용하여 `HTTP 상태코드가 404번일 때` 
-&nbsp;&nbsp;&nbsp;&nbsp; 에러 페이지로 가도록 설정해주었습니다.
+<br/> &nbsp;&nbsp;&nbsp;&nbsp; 에러 페이지로 가도록 설정해주었습니다.
 <br />&nbsp;&nbsp; - `시도했던 방법`: router.push를 이용하니 <b>[Error: Abort fetching component for route:]</b>의 에러가 났고 
-&nbsp;&nbsp;&nbsp;&nbsp; useState나 useContext도 사용해보고 Timer를 따로 컴포넌트로 빼는 등의 여러가지 방법을 시도해보았지만 해결이 되지 않았습니다.
+<br/> &nbsp;&nbsp;&nbsp;&nbsp; useState나 useContext도 사용해보고 Timer를 따로 컴포넌트로 빼는 등의 여러가지 방법을 시도해보았지만 해결이 되지 않았습니다.
