@@ -23,7 +23,7 @@ Next , start the Project : <br/>
 <br /> ✓ 헤더에는 프로젝트이름(`AWESOME FOOD STORE`)과 메뉴(`ABOUT` + `STORE`) 표현
 <br /> ✓ 푸터에는 카피라이트 추가(`@ 2020 내이름`)
 <br /> &nbsp;&nbsp; - 레이아웃을 따로 만들어서 _app.tsx에 추가해주었습니다.
-<br /> &nbsp;&nbsp; - <b>layout 폴더 위치 : src {">"}commons {">"} layout</b>
+<br /> &nbsp;&nbsp; - <b>layout 폴더 위치 : src > commons > layout</b>
 <br/> <br/>
      
 ### ABOUT, STORE 페이지와 팝업 구성
