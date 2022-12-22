@@ -9,7 +9,7 @@ Next , start the Project : <br/>
 <br/>
 
  ## 2. 사용한 기술 스택
-`Next.js`, `React`, `Typescript`, `axios`,`Emotion`
+`Next.js` `React` `Typescript`
 
 <br/>
 
